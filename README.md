@@ -2,7 +2,7 @@
 R example code used in an article titled, [Automatic Predictor Selection in Large-scale Assessments Using Machine Learning: Penalized Regression Models for Hierarchical Data]
 This article is submitted to a journal and under review. The more detailed information will be further updated once it is accepted.
 
-## Empirical Data Analysis
+## Empirical Data Resource
 The data that support the findings of this study are openly available at [TIMSS 2019 International Database](https://timssandpirls.bc.edu/timss2019/international-database)
 
 ## Simulation Studies
