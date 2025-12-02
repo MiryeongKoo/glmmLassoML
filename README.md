@@ -1,5 +1,5 @@
 # glmmLassoML
-R example code used in an article titled, [Automatic Predictor Selection in Large-scale Assessments Using Machine Learning: Penalized Regression Models for Hierarchical Data]
+R example code used in an article titled, [Automatic Predictor Selection in Large-scale Assessments Using Machine Learning: Penalized Regression Models for Hierarchical Data].
 This article will be submitted to a journal. The more detailed information will be further updated once it is accepted/published.
 
 ## Empirical Data Resource
