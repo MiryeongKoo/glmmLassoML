@@ -7,8 +7,9 @@ data <- read.csv(file = "data.csv", header = TRUE)
 
 # Data generation
 ## Generate a vector of non-zero coefficients (betas)
-coef <- c(513.5282,-20.7033,-11.4100,15.5133,10.3119,-10.8415,8.5774,9.4806,-2.9026,-2.6038,5.7120,4.3972,-3.3299)
+coef <- c(513.7047,-20.7923,-11.4161,15.5381,10.3118,-10.8601,8.5413,9.3611,-3.0308,-2.6966,5.7794,4.3715,-3.3173,2.5554)
 coef <- as.matrix(coef, nrow = length(coef), ncol = 1)
+data$interaction <- data[,53]*data[,136] # create a cross-level interaction term
 
 ## Generate fixed-effects part
 IV <- data[,c(2,53,73,80,135:138,140,142,189,237)] # locations of predictors with non-zero coefficients
@@ -36,11 +37,11 @@ for (k in 1:NN){
   print(paste("I ", k,sep=""))
   
   ## Generate random-effects part 
-  Rij <- rnorm(8116, mean = 0, sd = 60.06) # residuals
+  Rij <- rnorm(8116, mean = 0, sd = 60.01) # residuals
   
   ### School-level random effects
-  cov_matrix <- matrix(c(37.11^2, 37.11*10.86*0.24,
-                         37.11*10.86*0.24, 10.86^2), 
+  cov_matrix <- matrix(c(37.05^2, 37.05*10.86*0.24,
+                         37.05*10.86*0.24, 10.86^2), 
                        nrow = 2, ncol = 2)
   mean_vector = c(0,0)
   random_effects <- mvrnorm(230, mu = mean_vector, Sigma = cov_matrix)
